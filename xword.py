@@ -1,24 +1,10 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
 """Crossword Solver Program"""
 
-# Can this be done in a single regex??
-# Probably a 6 kyu difficulty level.
+__author__ = "???"
 
-
-def check_word(test_word, dictionary):
-    result = []
-    nonBlanks = len(test_word) - test_word.count(' ')
-    for word in dictionary:
-        incLetter = 0
-        incMatch = 0
-        if len(word) == len(test_word):
-            for letter in test_word:
-                if letter == word[incLetter]:
-                    incMatch += 1
-                incLetter += 1
-            if incMatch == nonBlanks:
-                result.append(word)
-    return result
+# YOUR HELPER FUNCTION GOES HERE
 
 
 def main():
@@ -26,8 +12,10 @@ def main():
         words = f.read().split()
 
     test_word = raw_input(
-        'Please enter a word to solve.\nUse spaces to signify unkown letters: ').lower()
-    print(check_word(test_word, words))
+        'Please enter a word to solve.\nUse spaces to signify unknown letters: ').lower()
+
+    # YOUR ADDITIONAL CODE HERE
+    raise NotImplementedError('Please complete this')
 
 
 if __name__ == '__main__':
